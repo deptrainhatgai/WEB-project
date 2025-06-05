@@ -1,0 +1,66 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo a {
+    font-size: 1.5em;
+    color: #e83e8c; /* Màu hồng chủ đạo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+}
+.account-info {
+    display: flex;
+    align-items: center;
+}
+
+.account-info span {
+    margin-right: 10px;
+}
+
+.account-info a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.account-info a i {
+    margin-right: 5px;
+}
+
+.account-actions a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 5px;
+}

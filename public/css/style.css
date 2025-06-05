@@ -1,0 +1,561 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền tổng thể */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Loại bỏ display: flex mặc định ở đây để các container có thể bố trí linh hoạt hơn */
+}
+
+/* --- Top Bar (Header) --- */
+.top-bar {
+    background-color: #ffb9d4; /* Nền trắng cho header */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.top-bar .logo a {
+    font-size: 1.9em; /* Kích thước logo */
+    font-weight: bold;
+    color: #4e2569; /* Màu hồng Lilicake */
+    text-decoration: none;
+    margin-right: 50px;
+}
+.home {
+    padding: 20px;
+}
+/* --- Search Input Wrapper (thay cho .search-box) --- */
+.top-bar .search-input-wrapper {
+    position: relative; /* Quan trọng để định vị icon bên trong */
+    flex-grow: 1;
+    max-width: 500px;
+    display: flex; /* Để input chiếm hết chiều rộng có thể */
+    align-items: center; /* Căn giữa icon và input */
+}
+
+.top-bar .search-input-wrapper input {
+    border: 1px solid #150202;
+    padding: 8px 15px;
+    padding-right: 40px; /* Tạo không gian cho icon */
+    border-radius: 20px;
+    outline: none;
+    flex-grow: 1; /* Cho phép input mở rộng */
+    font-size: 1em;
+}
+
+.top-bar .search-icon {
+    position: absolute; /* Định vị tuyệt đối */
+    right: 15px; /* Khoảng cách từ bên phải */
+    color: #000000; /* Màu xám cho icon */
+    cursor: pointer; /* Cho biết có thể click vào */
+    font-size: 1.1em;
+}
+
+/* Điều chỉnh responsive cho search-input-wrapper */
+@media (max-width: 768px) {
+    .top-bar .search-input-wrapper {
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+.top-bar .search-box button:hover {
+    background-color: #00358a;
+}
+
+.top-bar .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-bar .user-actions .action-item {
+    color: #6f6e6e;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.top-bar .user-actions .action-item:hover {
+    color: #ffffff;
+}
+
+/* --- Main Navigation (Menu categories) --- */
+.main-nav {
+    background-color: #ffffff; /* Màu nền hồng nhạt hơn */
+    padding: 30px 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: center; /* Căn giữa các mục menu */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu quá dài */
+    gap: 15px; /* Khoảng cách giữa các mục */
+}
+
+.main-nav ul li .nav-item {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #f9b5b5; /* Viền nhẹ */
+    border-radius: 20px; /* Bo tròn góc */
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Ngăn không cho chữ xuống dòng */
+    background-color: #fff; /* Nền trắng cho từng item */
+}
+
+.main-nav ul li .nav-item:hover,
+.main-nav ul li .nav-item.active {
+    /* Thêm lớp 'active' cho mục đang chọn */
+    background-color: #e96d8e;
+    color: white;
+    border-color: #e96d8e;
+}
+
+/* --- Content & Product Grid --- */
+.content {
+    padding: 0px 0;
+}
+
+/* --- Category Banner (thay thế cho .category-heading) --- */
+.category-banner {
+    background-color: #e96d8e; /* Màu hồng Lilicake */
+    color: white; /* Chữ trắng */
+    text-align: center;
+    padding: 15px 20px; /* Khoảng cách bên trong */
+    border-radius: 30px; /* Bo tròn góc */
+    margin: 40px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+    max-width: 600px; /* Chiều rộng tối đa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+}
+
+.category-banner h2 {
+    font-size: 2em; /* Kích thước chữ */
+    margin: 0; /* Bỏ margin mặc định của h2 */
+    padding: 0;
+    font-weight: bold; /* Đảm bảo chữ đậm */
+}
+
+/* Điều chỉnh responsive cho category-banner */
+@media (max-width: 768px) {
+    .category-banner {
+        max-width: 90%; /* Điều chỉnh chiều rộng trên màn hình nhỏ hơn */
+        font-size: 1.5em; /* Giảm kích thước chữ */
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-banner h2 {
+        font-size: 1.6em; /* Giảm kích thước chữ trên điện thoại */
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    ); /* 4 cột trên màn hình lớn, tự động co giãn */
+    gap: 25px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Đảm bảo hình ảnh không tràn ra ngoài */
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh cover hết không gian mà không bị méo */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 25px; /* Đảm bảo chiều cao tối thiểu để không bị xô lệch */
+}
+
+.product-info .price {
+    font-size: 1.3em;
+    color: #e96d8e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-info .sold {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.choose-button {
+    background-color: #e96d8e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80%; /* Chiếm phần lớn chiều rộng của card */
+    margin: 0 auto; /* Căn giữa */
+    transition: background-color 0.3s ease;
+}
+
+.choose-button:hover {
+    background-color: #d15a77;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        ); /* 3 cột trên tablet */
+    }
+    .top-bar .search-box {
+        max-width: 300px; /* Thu nhỏ ô tìm kiếm */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .top-bar .logo {
+        margin-right: 0;
+    }
+    .top-bar .search-box {
+        width: 100%;
+        max-width: unset; /* Cho phép mở rộng tối đa */
+    }
+    .top-bar .user-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        ); /* 2 cột trên điện thoại */
+    }
+    .category-heading {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 cột trên điện thoại rất nhỏ */
+    }
+    .top-bar .search-box input {
+        width: calc(100% - 70px); /* Điều chỉnh cho nút tìm kiếm */
+    }
+    .choose-button {
+        width: 90%;
+    }
+}
+/* --- View More Button --- */
+.view-more-container {
+    text-align: center; /* Căn giữa nút */
+    margin-top: 30px; /* Khoảng cách từ lưới sản phẩm */
+    margin-bottom: 50px; /* Khoảng cách tới các phần khác */
+}
+
+.view-more-button {
+    display: inline-block; /* Để có thể thiết lập padding và margin */
+    padding: 12px 30px;
+    background-color: white; /* Nền trắng */
+    color: #e96d8e; /* Chữ màu hồng */
+    border: 1px solid #e96d8e; /* Viền màu hồng */
+    border-radius: 25px; /* Bo tròn góc */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Bóng nhẹ */
+}
+
+.view-more-button:hover {
+    background-color: #e96d8e; /* Khi hover, nền hồng */
+    color: white; /* Chữ trắng */
+    transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ lên */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng rõ hơn */
+}
+
+/* Điều chỉnh khoảng cách cho heading nếu cần */
+.category-heading {
+    margin-bottom: 30px; /* Giữ nguyên khoảng cách */
+}
+/* style.css */
+
+/* ... (Giữ nguyên các quy tắc CSS khác ở phía trên) ... */
+
+/* --- Background colors for each category section (Even shorter classes) --- */
+.category-section {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.category-section .container {
+    background-color: transparent;
+}
+
+/* Màu nền cụ thể cho từng loại bánh với class cực ngắn gọn */
+
+.s-birthday {
+    background-color: #ffeef2; /* Hồng rất nhạt */
+}
+
+.s-event {
+    background-color: #e6f7ff; /* Xanh da trời nhạt */
+}
+
+.s-fruit {
+    background-color: #fff8e1; /* Vàng kem nhạt */
+}
+
+.s-drawing {
+    background-color: #f0fff0; /* Xanh lá cây nhạt */
+}
+
+.s-bento {
+    background-color: #fdf6e3; /* Màu be nhạt */
+}
+
+/* ... (Giữ nguyên các quy tắc CSS responsive hoặc footer của bạn ở phía dưới) ... */
+.sidebar {
+    height: 100%;
+    width: 280px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -330px;
+    z-index: 1001;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header h3 {
+    color: #e91e63;
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin: 12px 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+#back-to-top {
+    position: fixed; /* Cố định ở góc trang */
+    bottom: 20px; /* Cách đáy trang 20px */
+    right: 20px; /* Cách bên phải trang 20px */
+    z-index: 999; /* Đảm bảo nó nằm trên các nội dung khác */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hình tròn */
+    background-color: rgba(255, 138, 241, 0.5); /* Nền đen mờ */
+    color: white;
+    text-align: center;
+    line-height: 40px; /* Căn giữa icon theo chiều dọc */
+    font-size: 20px;
+    cursor: pointer;
+    /* Bỏ các thuộc tính ẩn ban đầu */
+    /* opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; */
+}
+
+/* Bỏ class .show vì không cần ẩn hiện nữa */
+/* #back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+} */
+
+#back-to-top a {
+    color: white;
+    text-decoration: none;
+}
+/* ... các CSS hiện tại của bạn ... */
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 0.4em;
+}
+
+.flying-item {
+    position: fixed; /* Quan trọng: để phần tử bay trên màn hình khi cuộn */
+    z-index: 1001; /* Đảm bảo nó ở trên các phần tử khác */
+    border-radius: 50%; /* Tạo hình tròn cho hiệu ứng bay */
+    opacity: 0.8;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.cart-badge.animate-badge {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

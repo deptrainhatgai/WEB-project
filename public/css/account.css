@@ -1,0 +1,164 @@
+.account-page {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.account-page h1 {
+    color: #e83e8c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.user-info strong {
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+.account-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-details,
+.edit-info-form,
+.change-password {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.detail-item strong {
+    min-width: 150px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.save-btn {
+    background-color: #007bff;
+}
+
+.cancel-edit-btn {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.back-home-btn,
+.logout-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.back-home-btn {
+    background-color: #6c757d;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background-color: #d9534f;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Ví dụ CSS cho thông báo thành công */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
